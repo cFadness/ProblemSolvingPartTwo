@@ -7,10 +7,9 @@ function isHappyNumber(positiveInteger){
     let sum
     let x = true
     let numNumArray
-    let i
+
     while(x){
-        i=0
-        for(i=0; i<numString.length; i++){
+        for(let i=0; i<numString.length; i++){
             numArray.push(numString[i])
         }
         numNumArray = numArray.map(function(element){
@@ -26,14 +25,14 @@ function isHappyNumber(positiveInteger){
             x = false
             return true
         }
-        else if(sum == positiveInteger){
+        else if(sum == 4 || sum == 16 || sum == 37 || sum == 58 || sum == 89 || sum == 145 || sum == 42 || sum ==20){
             x = false
             return false
         }
         else{
             numString = sum.toString()
+            numArray = []
         }
     }
 }
 
-console.log(isHappyNumber(19))
